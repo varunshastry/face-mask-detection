@@ -31,16 +31,16 @@ Install the libraries using → pip3.8 install -U keras matplotlib numpy opencv-
 Download and install Jupyter Notebook - https://jupyter.org/install
 
 How to run:
-Download the image data set from here into a directory (say ~/face-mask-detection/dataset)
+Download the image data set from here into a directory (say /tmp/face-mask-detection/dataset)
 Unzip the downloaded dataset into 2 directories - train and test
-Download the source code (train.py and test.py) into a directory (say ~/face-mask-detection)
+Download the source code (train.py and test.py) into a directory (say /tmp/face-mask-detection)
 In the train.py file, set the following variables to corresponding values:
-TRAINING_DIR = "~/face-mask-detection/dataset/train"
-VALIDATION_DIR = "~/face-mask-detection/dataset/test"
+TRAINING_DIR = "/tmp/face-mask-detection/dataset/train"
+VALIDATION_DIR = "/tmp/face-mask-detection/dataset/test"
 Run the train.py:
 cd ~/face-mask-detection
 python3.8 train.py
-Successful execution of above command would result in the generation of models in the ~/face-mask-detection directory (like model2-001.model, model2-002.model, etc)
+Successful execution of above command would result in the generation of models in the /tmp/face-mask-detection directory (like model2-001.model, model2-002.model, etc)
 In the test.py file, make the following modifications:
 classifier = cv2.CascadeClassifier('<absolute-path-to-haarcascade_frontalface_default.xml>')
 Run the test.py by passing the generated model names as parameters to the script:
